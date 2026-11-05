@@ -13,7 +13,7 @@ const download = (name:string, content:string, mime:string) => {
 };
 const loadHistory = ():HistoryEntry[] => { try { const data=JSON.parse(sessionStorage.getItem('ricepest-history')||'[]'); return Array.isArray(data)? data.slice(0,20):[]; } catch { return []; } };
 
-function DetectionCanvas({imageUrl,result,enabled,selected,onSelect,canvasRef}:{imageUrl:string;result:Result|null;enabled:boolean;selected:number|null;onSelect:(n:number|null)=>void;canvasRef:React.RefObject<HTMLCanvasElement|null>}) {
+function DetectionCanvas({imageUrl,result,enabled,selected,onSelect,canvasRef}:{imageUrl:string;result:Result|null;enabled:boolean;selected:number|null;onSelect:(n:number|null)=>void;canvasRef:React.RefObject<HTMLCanvasElement>}) {
   const imgRef=useRef<HTMLImageElement|null>(null);
   const redraw=useCallback(()=>{
     const canvas=canvasRef.current; const img=imgRef.current; if(!canvas||!img||!img.complete||img.naturalWidth===0)return;
@@ -48,7 +48,7 @@ export default function App(){
   const [error,setError]=useState('');const [busy,setBusy]=useState(false);const [conf,setConf]=useState(.25);const [iou,setIou]=useState(.65);
   const [showBoxes,setShowBoxes]=useState(true);const [selected,setSelected]=useState<number|null>(null);
   const [history,setHistory]=useState<HistoryEntry[]>(loadHistory);const [drag,setDrag]=useState(false);
-  const fileInput=useRef<HTMLInputElement|null>(null);const canvasRef=useRef<HTMLCanvasElement|null>(null);
+  const fileInput=useRef<HTMLInputElement|null>(null);const canvasRef=useRef<HTMLCanvasElement>(null);
   const req=useRef<AbortController|null>(null);
   useEffect(()=>{const ctl=new AbortController();ready(ctl.signal).then(setHealth).catch(e=>{if(!ctl.signal.aborted)setHealthError(e.message||'Backend unavailable');});return()=>ctl.abort();},[]);
   useEffect(()=>{try{sessionStorage.setItem('ricepest-history',JSON.stringify(history));}catch{}},[history]);
