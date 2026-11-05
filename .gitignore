@@ -1,0 +1,111 @@
+# ============================================================
+# RicePest Spotter ? Day 32/100
+# Ignore generated/heavy files; preserve research evidence.
+# ============================================================
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Secrets
+.env
+.env.*
+!.env.example
+kaggle.json
+credentials.json
+secrets.json
+*.pem
+*.key
+
+# Node dependencies
+node_modules/
+.npm/
+.pnpm-store/
+.yarn/cache/
+
+# Frontend builds
+dist/
+dist-ssr/
+build/
+.next/
+.vite/
+coverage/
+
+# Notebook caches
+.ipynb_checkpoints/
+.ipython/
+
+# Machine learning checkpoints
+*.pt
+*.pth
+*.onnx
+*.engine
+*.tflite
+*.safetensors
+*.ckpt
+*.h5
+*.keras
+
+# Dataset archives
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+
+# Large training/data formats
+*.npy
+*.npz
+*.tfrecord
+*.tfrecords
+*.parquet
+*.arrow
+*.feather
+
+# Local datasets and generated runtime input
+uploads/
+temp_uploads/
+train_runs/
+lightning_logs/
+wandb/
+mlruns/
+tensorboard/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.log
+.cache/
+tmp/
+temp/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Keep GitHub portfolio evidence:
+# *.ipynb, *.md, *.json, *.csv, *.yaml
+# assets/plots, assets/examples, assets/screenshots
+# source code, configs, .gitkeep and lockfiles.
+#
+# Inspect large CSV and images before committing.
+# Distribute verified model weights separately.
