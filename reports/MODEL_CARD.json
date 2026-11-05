@@ -1,0 +1,77 @@
+{
+  "project": "Day 32/100 — RicePest Spotter",
+  "purpose": "Visual pest localization and annotated-box counting in still photographs",
+  "model": "YOLO11 nano with official pretrained weights; 30 source category IDs kept distinct",
+  "source": "https://github.com/kkb20334-lang/RicePest-30",
+  "source_license": "CC BY-NC 4.0; noncommercial research use. Check original redistribution conditions.",
+  "dataset_kaggle_input": "/kaggle/input/datasets/wafabila/ricepest-dataset",
+  "data_summary": {
+    "train": {
+      "source_images": 7915,
+      "eligible_images": 7623,
+      "excluded_images": 292,
+      "source_annotations": 55338,
+      "excluded_annotations_due_to_unsafe_images": 292,
+      "boxes": 55046,
+      "dropped_boxes_from_eligible": 0,
+      "clipped_boxes_from_eligible": 0,
+      "skipped_crowd_from_eligible": 0
+    },
+    "val": {
+      "source_images": 654,
+      "eligible_images": 646,
+      "excluded_images": 8,
+      "source_annotations": 4843,
+      "excluded_annotations_due_to_unsafe_images": 8,
+      "boxes": 4835,
+      "dropped_boxes_from_eligible": 0,
+      "clipped_boxes_from_eligible": 0,
+      "skipped_crowd_from_eligible": 0
+    }
+  },
+  "category_duplicate_name_warning": {
+    "Anomala corpulenta": 2
+  },
+  "class_mapping_csv": "audit/class_id_mapping.csv",
+  "validation_metrics": {
+    "precision": 0.7404709937206407,
+    "recall": 0.6254487556069235,
+    "mAP50": 0.6977450041749375,
+    "mAP50_95": 0.43370067800462425,
+    "n_train_images": 7623,
+    "n_val_images": 646,
+    "test_set_available": false,
+    "model": "yolo11n.pt fine-tuned",
+    "metrics_split": "validation"
+  },
+  "validation_count_metrics": {
+    "threshold_conf": 0.25,
+    "threshold_iou": 0.65,
+    "validation_images": 646,
+    "total_count_MAE": 1.5526315789473684,
+    "total_count_RMSE": 2.896298481103228,
+    "exact_total_count_fraction": 0.42879256965944273,
+    "limitation": "Counts are boxes detected against annotated boxes, not real-world pest census"
+  },
+  "preprocessing": "COCO bbox normalized to YOLO xywh using source image sizes, no manual label merging",
+  "split_policy": "Source train/val assignments preserved; V3 eligible subset excludes >2% aspect mismatch images and linked annotations; exact cross-split SHA256 checked",
+  "known_limitations": [
+    "No independent test split",
+    "Validation may not represent unseen farms, sensors, or growing seasons",
+    "Source includes field, web, and lab imagery; domain shift",
+    "Class names duplicated by source ID; ambiguous species identity",
+    "300 unsafe aspect-ratio images (per V2 log) are excluded, not corrected; check current audit for exact counts",
+    "Near-duplicate audit is not comprehensive",
+    "Class-imbalanced small and dense objects",
+    "False negatives bias counts",
+    "Inference confidence is not a calibrated probability",
+    "Not a crop disease diagnosis or whole-field pest census"
+  ],
+  "release_status": "Exploratory academic MVP; not production-certified",
+  "model_file": "models/best.pt",
+  "onnx": {
+    "attempted": true,
+    "success": false,
+    "error": "SameFileError(\"PosixPath('/kaggle/working/Day32_RicePest_Spotter/models/best.onnx') and PosixPath('/kaggle/working/Day32_RicePest_Spotter/models/best.onnx') are the same file\")"
+  }
+}

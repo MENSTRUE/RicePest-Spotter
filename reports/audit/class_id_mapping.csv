@@ -1,0 +1,31 @@
+source_category_id,yolo_id,original_name,model_name
+1,0,Ostrinia furnacalis,Ostrinia furnacalis
+2,1,Chilo suppressalis,Chilo suppressalis
+3,2,Cnaphalocrocis medinalis,Cnaphalocrocis medinalis
+4,3,Scirpophaga incertulas,Scirpophaga incertulas
+5,4,Spodoptera frugiperda,Spodoptera frugiperda
+6,5,Spodoptera spp.,Spodoptera spp.
+7,6,Sesamia inferens,Sesamia inferens
+8,7,Agrotis ipsilon,Agrotis ipsilon
+9,8,Anomala corpulenta,Anomala corpulenta [source_id=9]
+10,9,Holotrichia diomphalia,Holotrichia diomphalia
+11,10,Dytiscidae,Dytiscidae
+12,11,Hydrochara affinis,Hydrochara affinis
+13,12,Gryllotalpidae,Gryllotalpidae
+14,13,Sirthenea flavipes,Sirthenea flavipes
+15,14,Naranga aenescens,Naranga aenescens
+16,15,Jacobiasca formosana,Jacobiasca formosana
+17,16,Geometridae,Geometridae
+18,17,copper-green chafer,copper-green chafer
+19,18,Anomala corpulenta,Anomala corpulenta [source_id=19]
+20,19,Plutella xylostella,Plutella xylostella
+21,20,Spodoptera litura,Spodoptera litura
+22,21,Trichoptera,Trichoptera
+23,22,Trichoplusia ni,Trichoplusia ni
+24,23,Agrotis segetum,Agrotis segetum
+25,24,Lymantriinae,Lymantriinae
+26,25,Axylia putris,Axylia putris
+27,26,Athetis spp.,Athetis spp.
+28,27,Helicoverpa armigera,Helicoverpa armigera
+29,28,Spodoptera exigua,Spodoptera exigua
+30,29,Diaphania pyloalis,Diaphania pyloalis

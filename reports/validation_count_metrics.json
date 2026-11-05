@@ -1,0 +1,9 @@
+{
+  "threshold_conf": 0.25,
+  "threshold_iou": 0.65,
+  "validation_images": 646,
+  "total_count_MAE": 1.5526315789473684,
+  "total_count_RMSE": 2.896298481103228,
+  "exact_total_count_fraction": 0.42879256965944273,
+  "limitation": "Counts are boxes detected against annotated boxes, not real-world pest census"
+}

@@ -1,0 +1,1 @@
+Source category IDs deliberately kept separate even if their display names match. Inspect ambiguous categories before any real-world species-level claims.

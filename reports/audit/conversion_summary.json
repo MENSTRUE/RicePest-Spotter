@@ -1,0 +1,24 @@
+{
+  "train": {
+    "source_images": 7915,
+    "eligible_images": 7623,
+    "excluded_images": 292,
+    "source_annotations": 55338,
+    "excluded_annotations_due_to_unsafe_images": 292,
+    "boxes": 55046,
+    "dropped_boxes_from_eligible": 0,
+    "clipped_boxes_from_eligible": 0,
+    "skipped_crowd_from_eligible": 0
+  },
+  "val": {
+    "source_images": 654,
+    "eligible_images": 646,
+    "excluded_images": 8,
+    "source_annotations": 4843,
+    "excluded_annotations_due_to_unsafe_images": 8,
+    "boxes": 4835,
+    "dropped_boxes_from_eligible": 0,
+    "clipped_boxes_from_eligible": 0,
+    "skipped_crowd_from_eligible": 0
+  }
+}

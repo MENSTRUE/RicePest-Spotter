@@ -1,0 +1,5 @@
+{
+  "attempted": true,
+  "success": false,
+  "error": "SameFileError(\"PosixPath('/kaggle/working/Day32_RicePest_Spotter/models/best.onnx') and PosixPath('/kaggle/working/Day32_RicePest_Spotter/models/best.onnx') are the same file\")"
+}

@@ -1,0 +1,18 @@
+{
+  "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "torch": "2.11.0+cu130",
+  "ultralytics": "8.4.202",
+  "seed": 42,
+  "configuration": {
+    "seed": 42,
+    "weights": "yolo11n.pt",
+    "epochs": 65,
+    "patience": 15,
+    "imgsz": 640,
+    "batch": 16,
+    "device": 0,
+    "workers": 2,
+    "conf_threshold": 0.25,
+    "iou_threshold": 0.65
+  }
+}

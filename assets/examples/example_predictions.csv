@@ -1,0 +1,13 @@
+sample_image,output,total_predicted,counts_per_species
+1413_8c11ef32b4b5.jpg,example_00.jpg,10,"{""Helicoverpa armigera"": 4, ""Ostrinia furnacalis"": 5, ""Chilo suppressalis"": 1}"
+4324_4bf3d1f731c5.jpg,example_01.jpg,1,"{""Trichoplusia ni"": 1}"
+2606_bb99618b2041.jpg,example_02.jpg,3,"{""Gryllotalpidae"": 2, ""Sirthenea flavipes"": 1}"
+7639_d8115e488d3e.jpg,example_03.jpg,9,"{""Chilo suppressalis"": 4, ""Athetis spp."": 1, ""Spodoptera spp."": 2, ""Gryllotalpidae"": 1, ""Sirthenea flavipes"": 1}"
+6763_9e4c1d6cb5d3.jpg,example_04.jpg,5,"{""Lymantriinae"": 1, ""Agrotis segetum"": 1, ""Plutella xylostella"": 3}"
+2145_4a4d7ab3206c.jpg,example_05.jpg,7,"{""Chilo suppressalis"": 3, ""Trichoptera"": 4}"
+7544_3d3a81e1c41c.jpg,example_06.jpg,2,"{""Athetis spp."": 2}"
+9236_0032aa5f9a05.jpg,example_07.jpg,10,"{""Cnaphalocrocis medinalis"": 2, ""Ostrinia furnacalis"": 8}"
+8156_638f82ae6ad0.jpg,example_08.jpg,1,"{""Scirpophaga incertulas"": 1}"
+9321_707636723b35.jpg,example_09.jpg,9,"{""Naranga aenescens"": 4, ""Chilo suppressalis"": 3, ""Ostrinia furnacalis"": 1, ""copper-green chafer"": 1}"
+1194_e5c7327e01b1.jpg,example_10.jpg,5,"{""Holotrichia diomphalia"": 1, ""Ostrinia furnacalis"": 2, ""Helicoverpa armigera"": 2}"
+8376_4f8f942e49a9.jpg,example_11.jpg,2,"{""Spodoptera frugiperda"": 2}"

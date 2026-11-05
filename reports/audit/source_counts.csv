@@ -1,0 +1,3 @@
+split,coco_file,images,annotations,categories
+train,/kaggle/input/datasets/wafabila/ricepest-dataset/RicePest-30/train/annotations_coco_clean.json,7915,55338,30
+val,/kaggle/input/datasets/wafabila/ricepest-dataset/RicePest-30/val/annotations_coco_clean.json,654,4843,30
