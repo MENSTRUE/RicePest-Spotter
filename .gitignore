@@ -1,71 +1,127 @@
+
 # ============================================================
-# RicePest Spotter ? Day 32/100
-# Ignore generated/heavy files; preserve research evidence.
+# RicePest Spotter — Day 32/100
+# Agriculture | Computer Vision | YOLO11 | Full-Stack
 # ============================================================
 
-# Python
+# ============================================================
+# 1. PYTHON — CACHE & COMPILED FILES
+# ============================================================
 __pycache__/
 *.py[cod]
+*$py.class
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-*.egg-info/
+.pyre/
+.pytype/
+.hypothesis/
+.tox/
+.nox/
 
-# Virtual environments
+# Python packaging
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+wheels/
+
+# ============================================================
+# 2. PYTHON — VIRTUAL ENVIRONMENTS
+# ============================================================
 .venv/
 venv/
 env/
 ENV/
+virtualenv/
+.python-version
 
-# Secrets
+# ============================================================
+# 3. SECRETS & ENVIRONMENT VARIABLES
+# ============================================================
 .env
 .env.*
 !.env.example
-kaggle.json
-credentials.json
-secrets.json
+
 *.pem
 *.key
+*.p12
+*.pfx
+*.secret
 
-# Node dependencies
+credentials.json
+secrets.json
+service-account*.json
+kaggle.json
+.kaggle/
+
+# ============================================================
+# 4. NODE.JS — DEPENDENCIES
+# ============================================================
 node_modules/
 .npm/
 .pnpm-store/
 .yarn/cache/
+.yarn/unplugged/
+.pnp.*
 
-# Frontend builds
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Keep package.json and package-lock.json
+
+# ============================================================
+# 5. FRONTEND — GENERATED BUILDS
+# ============================================================
 dist/
 dist-ssr/
 build/
 .next/
+.nuxt/
+.output/
 .vite/
-coverage/
+.parcel-cache/
+.turbo/
 
-# Notebook caches
+coverage/
+playwright-report/
+test-results/
+
+# ============================================================
+# 6. JUPYTER / KAGGLE
+# ============================================================
 .ipynb_checkpoints/
 .ipython/
+kaggle_working/
+kagglehub/
 
-# Machine learning checkpoints
+# Keep original *.ipynb notebooks
+
+# ============================================================
+# 7. MACHINE LEARNING — CHECKPOINTS
+# ============================================================
 *.pt
 *.pth
 *.onnx
 *.engine
 *.tflite
-*.safetensors
 *.ckpt
+*.safetensors
 *.h5
+*.hdf5
 *.keras
+*.pb
+*.weights
+*.weights.h5
 
-# Dataset archives
-*.zip
-*.7z
-*.rar
-*.tar
-*.tar.gz
-*.tgz
-*.gz
+# Use Git LFS or GitHub Releases for reviewed weights.
+# Keep model metadata, class mappings and model cards.
 
-# Large training/data formats
+# ============================================================
+# 8. DATASETS — LARGE / GENERATED FILES
+# ============================================================
 *.npy
 *.npz
 *.tfrecord
@@ -73,39 +129,149 @@ coverage/
 *.parquet
 *.arrow
 *.feather
+*.sqlite
+*.sqlite3
 
-# Local datasets and generated runtime input
-uploads/
-temp_uploads/
+# Raw dataset directories, if temporarily created
+# inside the repository.
+RicePest-30/
+ricepest-dataset/
+yolo_dataset/
+
+# Do not create datasets/ under the fixed repository root.
+
+# Keep audit CSV, metrics CSV, JSON and YAML files.
+
+# ============================================================
+# 9. ARCHIVES & COMPRESSED DATA
+# ============================================================
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+*.bz2
+*.xz
+*.zst
+
+# ============================================================
+# 10. YOLO / PYTORCH TRAINING OUTPUTS
+# ============================================================
 train_runs/
+runs/
 lightning_logs/
 wandb/
 mlruns/
+mlartifacts/
 tensorboard/
 
-# Temporary files
+events.out.tfevents.*
+last*.pt
+
+# Original training histories and selected figures
+# belong in reports/ and assets/plots/.
+
+# ============================================================
+# 11. BACKEND — RUNTIME FILES
+# ============================================================
+uploads/
+temp_uploads/
+*.pid
+*.pid.lock
+*.sock
+
+# ============================================================
+# 12. TEMPORARY FILES & CACHE
+# ============================================================
 *.tmp
 *.temp
 *.bak
+*.old
 *.swp
 *.swo
-*.log
+*~
+
 .cache/
 tmp/
 temp/
 
-# Editors and OS
+*.log
+logs/
+
+# Source backups
+*.tsx.backup-*
+*.tsx.pre-fix-*
+*.py.backup-*
+
+# ============================================================
+# 13. IDE / EDITORS
+# ============================================================
 .vscode/
 .idea/
-.DS_Store
+
+# ============================================================
+# 14. OPERATING SYSTEM
+# ============================================================
+
+# Windows
 Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
+*.lnk
 
-# Keep GitHub portfolio evidence:
-# *.ipynb, *.md, *.json, *.csv, *.yaml
-# assets/plots, assets/examples, assets/screenshots
-# source code, configs, .gitkeep and lockfiles.
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ============================================================
+# 15. KEEP GITHUB PORTFOLIO EVIDENCE
+# ============================================================
+
+# DO NOT IGNORE:
 #
-# Inspect large CSV and images before committing.
-# Distribute verified model weights separately.
+# README.md
+# AGENTS.md
+# LICENSE
+# .env.example
+#
+# notebooks/*.ipynb
+#
+# models/*.md
+# models/*.json
+# models/*.yaml
+#
+# reports/*.md
+# reports/*.csv
+# reports/*.json
+# reports/*.txt
+#
+# assets/plots/
+# assets/examples/
+# assets/screenshots/
+# assets/diagrams/
+#
+# backend/
+# frontend/src/
+# docs/
+# scripts/
+#
+# requirements.txt
+# package.json
+# package-lock.json
+# pyproject.toml
+# uv.lock
+# .gitkeep
+#
+# IMPORTANT:
+# Review image licensing, file sizes and sensitive
+# content before publishing portfolio artifacts.
+#
+# GitHub ordinary Git file limit: 100 MiB.
+# Use Git LFS or reviewed external model releases
+# for large verified checkpoints.
+# ============================================================
