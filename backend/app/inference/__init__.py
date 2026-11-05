@@ -1,0 +1,1 @@
+"""RicePest Spotter application package."""

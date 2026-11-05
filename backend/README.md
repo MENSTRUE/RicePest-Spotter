@@ -1,35 +1,19 @@
-# Backend ? RicePest Spotter
+# RicePest Spotter — FastAPI inference
 
-## Purpose
-Provide an API for YOLO11n pest detection
-and visible-object counting.
+Loads the **original, locally stored** `models/best.pt` with Ultralytics YOLO and validates the checkpoint's 30 class names against `reports/audit/class_id_mapping.csv`. Never falls back to fake detections. Do not load unknown/untrusted `.pt` files.
 
-## Planned architecture
-- app/main.py: FastAPI entrypoint
-- app/api/routes/: endpoint definitions
-- app/core/: configuration
-- app/inference/: model loading and inference
-- app/schemas/: response and validation contracts
-- app/services/: image processing utilities
-- tests/: API and inference tests
+## Windows / PowerShell
 
-## Planned API contracts
-Health/readiness endpoint, image prediction endpoint,
-and structured detection/counting response.
+```powershell
+cd "D:\porto\100 day\day 32\RicePest Spotter\backend"
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m pytest -q
+.\.venv\Scripts\python.exe -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+```
 
-A prediction response should identify model version,
-class IDs, boxes, scores, per-class counts, and
-inference parameters.
+Endpoints: `GET /api/v1/health` (process only), `GET /api/v1/ready` (loads and validates original model), `POST /api/v1/predict` (multipart `file`, optional `conf`, `iou`, `imgsz`). Docs: http://127.0.0.1:8000/docs.
 
-## Security
-Validate MIME, decoded image, file size and image dimensions.
-Reject malformed or oversized uploads.
-Never execute uploaded content.
-Avoid persisting photographs by default.
+The prediction response includes image dimensions, `bbox_xyxy` in **original image pixel coordinates**, original source category IDs, model class IDs, confidence, counts per class and total, and model/inference metadata. Counts are based on detector outputs at user-selected thresholds—not verified field insect population. No independent held-out test was available in the Kaggle study.
 
-## Current status
-Not implemented or verified.
-No functional API or model-loading claim is made.
-
-Dependencies and run commands will be documented
-after the actual implementation is available.
+Configuration (env): `MODEL_PATH` (absolute or repo-relative), `DEVICE` (default `cpu`), `MAX_UPLOAD_MB` (default 10), `MAX_IMAGE_PIXELS` (default 20,000,000), `CORS_ORIGINS`. Requests are decoded into memory and not stored by this API. Limit deployment exposure; add authentication and rate limiting before public hosting. Unit API tests use a **mock**; only a `/ready` check and actual image request verify local checkpoint integration.

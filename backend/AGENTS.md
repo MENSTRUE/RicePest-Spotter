@@ -1,14 +1,2 @@
-# Backend Agent Rules
-
-Follow root AGENTS.md.
-
-Load only the audited checkpoint.
-Verify checkpoint class order and runtime dependencies.
-Preserve original 30 source category identities.
-Implement clear API response schemas.
-Reject invalid uploads and unsafe request inputs.
-Use documented confidence and IoU thresholds.
-Never claim a count represents full field population.
-Provide truthful readiness and prediction failure states.
-Test healthy paths and invalid request paths.
-Do not claim ONNX parity unless measured.
+# Backend agent rules
+Follow root `AGENTS.md`. Preserve the original YOLO11n checkpoint and 30 class ID mapping. Do not merge source IDs with duplicate names. Avoid re-training. Reject malformed, oversized and unsupported images. Do not present validation mAP as independent test. Test `/ready` with real local weights and `/predict` with a real image before claiming integration. Do not overwrite model artifacts.
