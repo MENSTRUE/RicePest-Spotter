@@ -1,12 +1,2 @@
-# Frontend Agent Rules
-
-Follow root AGENTS.md.
-
-Use real API contracts and response data.
-Never fabricate bounding boxes or pest predictions.
-Provide genuine image preview and result visualization.
-Show confidence/IoU threshold context.
-Use accessible responsive components.
-Include error, loading and empty states.
-Preserve any verified existing UI when making changes.
-Test build and backend integration before marking ready.
+# Frontend agent rules
+Follow repository root `AGENTS.md`. Do not hardcode real-looking detection boxes. Preserve working navigation and ensure every visible control performs its promised action. Render bounding boxes from actual API coordinates. Provide error/loading/empty states, responsive UI, and research disclaimer. Never silently alter source category IDs. Test TypeScript build and browser inference before claiming complete functionality.
